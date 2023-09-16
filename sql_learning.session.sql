@@ -53,3 +53,18 @@ MODIFY nama_barang VARCHAR(100) FIRST;
 
 ALTER TABLE barang
 MODIFY id INT NOT NULL;
+
+-- Perintah isi default value apabila kosong ketika insert
+ALTER TABLE barang
+    MODIFY jumlah_barang INT NOT NULL DEFAULT 0;
+
+ALTER TABLE barang
+    MODIFY harga_barang INT NOT NULL DEFAULT 0;
+-- Perintah menambahkan data time stamp
+ALTER TABLE barang
+ADD waktu_dibuat TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+
+-- Perintah sederdhana untuk insert barang
+
+INSERT INTO barang (id,nama_barang)
+VALUES(1,"Python-Book");
