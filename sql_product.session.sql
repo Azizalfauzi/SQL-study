@@ -9,6 +9,8 @@ create table product(
 
 show tables;
 
+show create table product;
+
 DESCRIBE product;
 
 -- Perintah untuk insert ke dalam table product tanpa deskripsi
@@ -33,3 +35,11 @@ SELECT * FROM product;
 
 -- Perintah select dengan menyebut nmanya
 SELECT id,name,quantity FROM product;
+
+-- Perintah untuk menambahkan primary key
+
+ALTER TABLE product 
+ADD primary key (id);
+
+INSERT into product (id,name,price,quantity)
+values ('P001','Buku python',30000,100);
