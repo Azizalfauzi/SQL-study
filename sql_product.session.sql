@@ -54,3 +54,31 @@ SELECT * FROM product WHERE id = 'P001';
 
 SELECT * FROM product WHERE name = 'Buku dart';
 
+
+
+DESCRIBE product;
+-- Perintah menambahkan kolom baru
+ALTER TABLE product
+ADD column category ENUM ('Back End','Front End','Lain-lain')
+AFTER name;
+
+SELECT * from product;
+
+-- Perintah update data single
+UPDATE product
+SET category ='Back End'
+WHERE id='P001';
+
+--Perintah update data multiple
+
+UPDATE product
+SET category ='Front End',
+deskripsi='Buku untuk front end'
+WHERE id='P002'
+
+
+-- Perintah update dengan value kolom 
+
+UPDATE product
+SET price = price + 5000
+WHERE id = 'P008';
