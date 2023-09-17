@@ -82,3 +82,9 @@ WHERE id='P002'
 UPDATE product
 SET price = price + 5000
 WHERE id = 'P008';
+
+
+-- Perintah delete data pada table
+DELETE FROM 
+product WHERE id='P0012';
+
