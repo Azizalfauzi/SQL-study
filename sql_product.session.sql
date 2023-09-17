@@ -20,12 +20,16 @@ values ('P002','Buku dart','Belajar bahasa pemrograman dart',25000,50);
 
 -- Perintah untuk insert ke dalam table product dengan banyak data
 INSERT into product (id,name,price,quantity)
-values ('P006','Buku nodejs',50000,500),
-('P007','Buku reactjs',80000,170),
-('P008','Buku angularjs',55000,190),
-('P009','Buku typescript',60000,120),
-('P0010','Buku html',25000,120),
-('P0011','Buku css',15000,110);
+values ('P007','Buku dart',76000,200),
+('P008','Buku xss',30000,120),
+('P009','Buku android',90000,110),
+('P0010','Buku ios',80000,120),
+('P0011','Buku .net',85000,120),
+('P0012','Buku spring boot',95000,110);
 
-
+-- Perintah select seluruh barang
 SELECT * FROM product;
+
+
+-- Perintah select dengan menyebut nmanya
+SELECT id,name,quantity FROM product;
