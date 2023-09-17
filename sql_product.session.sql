@@ -43,3 +43,14 @@ ADD primary key (id);
 
 INSERT into product (id,name,price,quantity)
 values ('P001','Buku python',30000,100);
+
+-- Perintah where clause
+
+SELECT * FROM product WHERE quantity = 120;
+
+SELECT * FROM product WHERE price = 25000;
+
+SELECT * FROM product WHERE id = 'P001';
+
+SELECT * FROM product WHERE name = 'Buku dart';
+
