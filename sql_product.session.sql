@@ -129,13 +129,35 @@ WHERE (
 SELECT *
 FROM product
 WHERE name LIKE '%dart%';
-
 -- PERINHA LIKE search dari kata huruf pertama
-
-SELECT * FROM product
+SELECT *
+FROM product
 WHERE category LIKE '%Fr%';
-
 -- Perintah NOT LIKE
-
-SELECT * FROM product
+SELECT *
+FROM product
 WHERE category NOT LIKE '%Front End%';
+-- Perintah mencari null
+SELECT *
+FROM product
+WHERE deskripsi IS NULL;
+-- Perintah mencari tidak null
+SELECT *
+FROM product
+WHERE deskripsi IS NOT NULL;
+-- Perintah between 
+SELECT *
+FROM product
+WHERE price BETWEEN 50000 AND 90000;
+-- Perintah not between
+SELECT *
+FROM product
+WHERE price NOT BETWEEN 50000 AND 90000;
+-- Perintah IN
+SELECT *
+FROM product
+WHERE category IN ('Front End', 'Back End');
+-- Perintah NOT IN
+SELECT *
+FROM product
+WHERE category NOT IN ('Front End', 'Back End');
