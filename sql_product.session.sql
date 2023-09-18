@@ -64,8 +64,8 @@ SELECT *
 from product;
 -- Perintah update data single
 UPDATE product
-SET category = 'Back End'
-WHERE id = 'P001';
+SET category = 'Front End'
+WHERE id = 'P007';
 --Perintah update data multiple
 UPDATE product
 SET category = 'Front End',
@@ -91,3 +91,13 @@ SELECT p.id AS 'Kode',
     p.price AS 'Harga',
     p.quantity AS 'Jumlah'
 FROM product AS p;
+-- Perintah select where > 
+SELECT *
+FROM product
+WHERE quantity > 120;
+-- Perintah select where !=
+SELECT *
+FROM product WHERE category != 'Lain-lain';
+-- Perintah select <>
+SELECT *
+FROM product WHERE category <> 'Front End';
