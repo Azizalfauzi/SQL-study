@@ -97,7 +97,45 @@ FROM product
 WHERE quantity > 120;
 -- Perintah select where !=
 SELECT *
-FROM product WHERE category != 'Lain-lain';
+FROM product
+WHERE category != 'Lain-lain';
 -- Perintah select <>
 SELECT *
-FROM product WHERE category <> 'Front End';
+FROM product
+WHERE category <> 'Front End';
+-- Perintah AND 
+SELECT *
+FROM product
+WHERE quantity > 120
+    AND price > 50000;
+SELECT *
+FROM product
+WHERE quantity >= 120
+    AND price < 50000;
+-- Perintah OR
+SELECT *
+FROM product
+WHERE quantity > 500
+    OR price > 50000;
+-- Perintah and dan or dalam sati kondisi prioritas
+SELECT *
+FROM product
+WHERE (
+        category = 'Front End'
+        OR quantity > 500
+    )
+    AND price > 50000;
+-- Perintah LIKE Search by keyword
+SELECT *
+FROM product
+WHERE name LIKE '%dart%';
+
+-- PERINHA LIKE search dari kata huruf pertama
+
+SELECT * FROM product
+WHERE category LIKE '%Fr%';
+
+-- Perintah NOT LIKE
+
+SELECT * FROM product
+WHERE category NOT LIKE '%Front End%';
