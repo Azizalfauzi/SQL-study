@@ -191,5 +191,9 @@ LIMIT 9, 3;
 -- Perintah distinc
 SELECT DISTINCT category
 FROM product;
---Perintah Auto increment
-
+--Perintah String funtion
+SELECT id,
+    LOWER(name) as 'Name Lower',
+    LENGTH(name) as 'Name Length',
+    UPPER(name) as 'Name Upper'
+FROM product;
