@@ -64,8 +64,8 @@ SELECT *
 from product;
 -- Perintah update data single
 UPDATE product
-SET category = 'Front End'
-WHERE id = 'P007';
+SET id = 'P011'
+WHERE id = 'P0011';
 --Perintah update data multiple
 UPDATE product
 SET category = 'Front End',
@@ -162,6 +162,10 @@ SELECT *
 FROM product
 WHERE category NOT IN ('Front End', 'Back End');
 --Perintah order by clause
+SELECT *
+FROM product
+ORDER BY id DESC;
+--Perintah order by clause
 SELECT id,
     category,
     name
@@ -173,3 +177,8 @@ SELECT id,
     name,price
 FROM product
 ORDER BY category ASC, price DESC;
+
+--Perintah LIMIT
+SELECT * FROM product ORDER BY id LIMIT 5;
+
+SELECT * FROM product ORDER BY id LIMIT 9,3;
