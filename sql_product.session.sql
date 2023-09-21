@@ -161,3 +161,15 @@ WHERE category IN ('Front End', 'Back End');
 SELECT *
 FROM product
 WHERE category NOT IN ('Front End', 'Back End');
+--Perintah order by clause
+SELECT id,
+    category,
+    name
+FROM product
+ORDER BY category;
+--Perintah order by clause tambah param lagi
+SELECT id,
+    category,
+    name,price
+FROM product
+ORDER BY category ASC, price DESC;
