@@ -217,3 +217,26 @@ SELECT id,
     YEAR(created_at),
     MONTH(created_at)
 FROM product;
+--Perintah control flow case
+SELECT id,
+    category,
+    CASE
+        category
+        WHEN 'Back End' THEN 'GREAT'
+        WHEN 'Front End' THEN 'PERFECT'
+        ELSE 'OP'
+    END AS 'Category'
+FROM product;
+-- Perintah control flow IF
+SELECT id,
+    price,
+    IF(
+        price <= 50000,
+        'Murah',
+        IF (price <= 75000, 'Mahal', 'Mahal Banget')
+    ) AS 'Mahal?'
+FROM product;
+
+-- Perintah cek kosong dan replace
+
+SELECT id,name, IFNULL(deskripsi,'Kosong') FROM product;
