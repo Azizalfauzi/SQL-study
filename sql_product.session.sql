@@ -174,15 +174,22 @@ ORDER BY category;
 --Perintah order by clause tambah param lagi
 SELECT id,
     category,
-    name,price
+    name,
+    price
 FROM product
-ORDER BY category ASC, price DESC;
-
+ORDER BY category ASC,
+    price DESC;
 --Perintah LIMIT
-SELECT * FROM product ORDER BY id LIMIT 5;
-
-SELECT * FROM product ORDER BY id LIMIT 9,3;
-
+SELECT *
+FROM product
+ORDER BY id
+LIMIT 5;
+SELECT *
+FROM product
+ORDER BY id
+LIMIT 9, 3;
 -- Perintah distinc
+SELECT DISTINCT category
+FROM product;
+--Perintah Auto increment
 
-SELECT DISTINCT category FROM product;
