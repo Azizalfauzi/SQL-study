@@ -197,3 +197,23 @@ SELECT id,
     LENGTH(name) as 'Name Length',
     UPPER(name) as 'Name Upper'
 FROM product;
+-- Perintah Date Time Func
+SELECT *
+FROM product;
+SELECT id,
+    created_at,
+    EXTRACT(
+        YEAR
+        FROM created_at
+    ) as YEAR,
+    EXTRACT(
+        MONTH
+        FROM created_at
+    ) as MONTH
+FROM product;
+-- Perintah Date Time Func cara lain
+SELECT id,
+    created_at,
+    YEAR(created_at),
+    MONTH(created_at)
+FROM product;
