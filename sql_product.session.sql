@@ -182,3 +182,7 @@ ORDER BY category ASC, price DESC;
 SELECT * FROM product ORDER BY id LIMIT 5;
 
 SELECT * FROM product ORDER BY id LIMIT 9,3;
+
+-- Perintah distinc
+
+SELECT DISTINCT category FROM product;
