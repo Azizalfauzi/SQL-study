@@ -256,3 +256,24 @@ FROM product;
 -- Perintah sum total product
 SELECT sum(quantity) as 'Total Stock'
 FROM product;
+-- Perintah Group by
+SELECT count(id) as 'Total Produk by category',
+    category
+FROM product
+GROUP BY category;
+SELECT max(price) as 'Produk termahal by category',
+    category
+FROM product
+GROUP BY category;
+SELECT min(price) as 'Produk termurah by category',
+    category
+FROM product
+GROUP BY category;
+SELECT AVG(price) as 'Rata-Rata harga produk by category',
+    category
+FROM product
+GROUP BY category;
+SELECT sum(quantity) as 'Total quantity produk by category',
+    category
+FROM product
+GROUP BY category;
