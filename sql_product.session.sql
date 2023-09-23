@@ -300,5 +300,28 @@ ADD CONSTRAINT price_check CHECK (price >= 10000);
 UPDATE product
 SET price = 15000
 WHERE id = 'P012';
-
 DESC product;
+SHOW CREATE TABLE product;
+-- Perintah add fulltext
+ALTER TABLE product
+ADD FULLTEXT product_fulltext(name, deskripsi);
+-- Perintah delete
+ALTER TABLE product DROP product_fulltext;
+--Perintah natural languange mode
+SELECT *
+FROM product;
+SELECT *
+FROM product
+WHERE MATCH(name, deskripsi) AGAINST ('html' IN NATURAL LANGUAGE MODE);
+--Perintah natural boolean mode
+SELECT *
+FROM product;
+SELECT *
+FROM product
+WHERE MATCH(name, deskripsi) AGAINST ('+html -dart' IN NATURAL BOOLEAN MODE);
+--Perintah natural quest expansion mode
+SELECT *
+FROM product;
+SELECT *
+FROM product
+WHERE MATCH(name, deskripsi) AGAINST ('html' WITH QUERY EXPANSION);
