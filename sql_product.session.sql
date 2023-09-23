@@ -283,3 +283,22 @@ SELECT count(id) as total,
 FROM product
 GROUP BY category
 HAVING total > 1;
+-- Perintah SQL having  constraint
+SELECT *
+FROM product;
+INSERT INTO product(id, name, category, deskripsi, price, quantity)
+VALUES (
+        'P013',
+        'Buku LSTM',
+        'Lain-lain',
+        'Buku LSTM',
+        5000,
+        250
+    );
+ALTER TABLE product
+ADD CONSTRAINT price_check CHECK (price >= 10000);
+UPDATE product
+SET price = 15000
+WHERE id = 'P012';
+
+DESC product;
