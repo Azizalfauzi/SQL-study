@@ -236,7 +236,23 @@ SELECT id,
         IF (price <= 75000, 'Mahal', 'Mahal Banget')
     ) AS 'Mahal?'
 FROM product;
-
 -- Perintah cek kosong dan replace
-
-SELECT id,name, IFNULL(deskripsi,'Kosong') FROM product;
+SELECT id,
+    name,
+    IFNULL(deskripsi, 'Kosong')
+FROM product;
+-- Perintah menghitung record
+SELECT count(id) as 'Total product'
+FROM product;
+-- Perintah max price record
+SELECT max(price) as 'Produk Termahal'
+FROM product;
+-- Perintah min price record
+SELECT min(price) as 'Produk Termurah'
+FROM product;
+-- Perintah rata rata price record
+SELECT avg(price) as 'Rata Rata Harga Produk'
+FROM product;
+-- Perintah sum total product
+SELECT sum(quantity) as 'Total Stock'
+FROM product;
