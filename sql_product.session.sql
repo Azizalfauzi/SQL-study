@@ -277,3 +277,9 @@ SELECT sum(quantity) as 'Total quantity produk by category',
     category
 FROM product
 GROUP BY category;
+-- Perintah having clause
+SELECT count(id) as total,
+    category
+FROM product
+GROUP BY category
+HAVING total > 1;
