@@ -325,3 +325,6 @@ FROM product;
 SELECT *
 FROM product
 WHERE MATCH(name, deskripsi) AGAINST ('html' WITH QUERY EXPANSION);
+
+INSERT into product (id, name,category, price, quantity)
+values ('P013', 'Buku Bert','Lain-lain', 40000, 150);
