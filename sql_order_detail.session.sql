@@ -40,6 +40,6 @@ SELECT orders.id,
     order_detail.quantity,
     order_detail.price,
     orders.order_date
-    FROM orders
+FROM orders
     JOIN order_detail ON(order_detail.id_order = orders.id)
     JOIN product ON(product.id = order_detail.id_product);

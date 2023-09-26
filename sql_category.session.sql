@@ -30,3 +30,27 @@ SELECT product.id,
     categories.name
 FROM product
     JOIN categories ON (categories.id = product.id_categories);
+-- Perintah perintah join
+SELECT *
+FROM product;
+SELECT *
+FROM categories;
+INSERT INTO categories(id, name)
+VALUES('C004', 'Data-Science'),
+    ('C005', 'Algorithm');
+--Perintah inner join
+SELECT *
+FROM categories
+    INNER JOIN product ON(product.id_categories = categories.id);
+--Perintah inner join default
+SELECT *
+FROM categories
+    JOIN product ON(product.id_categories = categories.id);
+--Perintah left join
+SELECT *
+FROM categories
+    LEFT JOIN product ON(product.id_categories = categories.id);
+--Perintah right join
+SELECT *
+FROM categories
+    RIGHT JOIN product ON(product.id_categories = categories.id);
