@@ -331,3 +331,27 @@ INSERT into product (id, name, price, quantity)
 values ('X001', 'X satu', 76000, 200),
     ('X002', 'X dua', 30000, 120),
     ('X003', 'X tiga', 90000, 110);
+-- Perintah SubQuery
+SELECT AVG(price)
+FROM product;
+SELECT *
+FROM product
+WHERE price > (
+        SELECT AVG(price)
+        FROM product
+    );
+SELECT MAX(price)
+FROM product;
+SELECT *
+FROM categories;
+SELECT *
+FROM product;
+SELECT price
+FROM categories
+    JOIN product ON(product.id_categories = categories.id);
+SELECT MAX(cp.price)
+FROM (
+        SELECT price
+        FROM categories
+            JOIN product ON (product.id_categories = categories.id)
+    ) as cp;
