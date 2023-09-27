@@ -57,3 +57,22 @@ SELECT DISTINCT customer.email,
 FROM customer
     LEFT JOIN guestbooks ON (customer.email = guestbooks.email)
 WHERE guestbooks.email IS NULL;
+-- Perintah transaction and commit 
+START TRANSACTION;
+INSERT INTO guestbooks(email, title, content)
+VALUES('guest4@gmail.com', 'Testing', 'Test'),
+    ('guest5@gmail.com', 'Testing', 'Test'),
+    ('guest6@gmail.com', 'Testing', 'Test');
+SELECT *
+FROM guestbooks;
+
+COMMIT;
+
+-- Perintah transaction and rollback 
+START TRANSACTION;
+
+DELETE FROM guestbooks;
+
+SELECT * FROM guestbooks;
+
+ROLLBACK;
