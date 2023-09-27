@@ -51,3 +51,9 @@ WHERE email IN (
 SELECT DISTINCT customer.email
 FROM customer
     INNER JOIN guestbooks ON (guestbooks.email = customer.email);
+-- Perintah MINUS
+SELECT DISTINCT customer.email,
+    guestbooks.email
+FROM customer
+    LEFT JOIN guestbooks ON (customer.email = guestbooks.email)
+WHERE guestbooks.email IS NULL;
