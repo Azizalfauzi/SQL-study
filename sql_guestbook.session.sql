@@ -41,3 +41,13 @@ FROM (
         FROM guestbooks
     ) as emails
 GROUP BY emails.email;
+--Perintah  instersect
+SELECT DISTINCT email
+FROM customer
+WHERE email IN (
+        SELECT DISTINCT email
+        FROM guestbooks
+    );
+SELECT DISTINCT customer.email
+FROM customer
+    INNER JOIN guestbooks ON (guestbooks.email = customer.email);
