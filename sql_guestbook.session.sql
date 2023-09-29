@@ -66,6 +66,10 @@ VALUES('guest4@gmail.com', 'Testing', 'Test'),
 SELECT *
 FROM guestbooks;
 
+UPDATE guestbooks
+SET title = 'Diubah oleh user 5'
+WHERE id = 3;
+
 COMMIT;
 
 -- Perintah transaction and rollback 
